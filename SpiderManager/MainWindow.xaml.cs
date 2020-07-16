@@ -23,6 +23,13 @@ namespace SpiderManager
         public MainWindow()
         {
             InitializeComponent();
+            NowDateDescription.Text += DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            FormHeaderLabel.Content = "Добавить нового паука:";
+            AddAndEdit.Visibility = Visibility.Visible;
         }
     }
 }

@@ -3,27 +3,63 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:SpiderManager"
         xmlns:customcontrols="clr-namespace:SpiderManager.CustomControls"
         mc:Ignorable="d"
-        Title="SpiderManager" Height="450" Width="800">
-    <Grid>
+        Title="SpiderManager" Height="450" Width="795" Icon="icons/spider_4106.ico">
+    
+    <Grid Margin="0,0,6,0">
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <WrapPanel Grid.Row="0" Grid.Column="0" Margin="5px">
-            <Label x:Name="choiseHeader" Content="Линька паука:" FontSize="20" FontFamily="Verdana" Width="367"/>
-            <customcontrols:MyNumericUpDown Width="225" Height="37" Margin="0 0 0 5"/>
-            <Label x:Name="dateOfEating" Content="Дата последнего кормления:" FontSize="20" FontFamily="Verdana"></Label>
-            <DatePicker Width="380" Height="38" FontSize="20" FontFamily="Verdana"/>
-            <Button x:Name="Apply" Content="Подтвердить" FontSize="20" FontFamily="Verdana" Margin="0 5 0 0"/>
 
+        <ListBox x:Name="SpidersList" Grid.Row="0" Grid.Column="0">
+            <TextBlock x:Name="ListHeader" FontSize="20" FontFamily="Verdana">Выберите паука из списка</TextBlock>
+        </ListBox>
+
+        <Button x:Name="Add" Grid.Column="1" Grid.Row="0" Content="Добавить нового паука" FontSize="20" FontFamily="Verdana" Click="Add_Click"></Button>
+
+        <!--Info of a choosen spider-->
+        <WrapPanel Visibility="Hidden" Grid.Row="1" Grid.Column="0" Margin="4,5,5,5">
+            <Label x:Name="TypeLabel" FontSize="20" FontFamily="Verdana"/>
+            <Label x:Name="NameLabel" FontSize="20" FontFamily="Verdana"/>
+            <Label x:Name="MiltingLabel" FontSize="20" FontFamily="Verdana"></Label>
+            <Label x:Name="LastEatingLabel" FontSize="20" FontFamily="Verdana"></Label>
+            <Label x:Name="NextEatingLabel" FontSize="20" FontFamily="Verdana"/>
+            <Button x:Name="Edit" Content="Редактировать" FontSize="20" FontFamily="Verdana" Margin="0 5 0 0"/>
         </WrapPanel>
 
+        <!--add/edit form-->
+        <WrapPanel x:Name="AddAndEdit" Visibility="Hidden" Grid.Row="1" Grid.Column="1">
+            <Label x:Name="FormHeaderLabel" FontSize="22" FontFamily="Verdana" Margin="0 0 0 10px"/>
+            <Label x:Name="SpiderTypeLabel" Content="Вид паука:" FontSize="18" FontFamily="Verdana"/>
+            <TextBox x:Name="SpiderType" FontSize="20" FontFamily="Verdana" Width="377"></TextBox>
+            <Label x:Name="SpiderNameLabel" Content="Кличка паука:" FontSize="18" FontFamily="Verdana"/>
+            <TextBox x:Name="SpiderName" FontSize="20" FontFamily="Verdana" Width="377"></TextBox>
+            <Label x:Name="ChooseHeaderLabel" Content="Линька паука:" FontSize="18" FontFamily="Verdana" Width="367"/>
+            <customcontrols:MyNumericUpDown x:Name="Choose" Width="225" Height="37" Margin="0 0 0 5"/>
+            <Label x:Name="DateOfEatingLabel" Content="Дата последнего кормления:" FontSize="20" FontFamily="Verdana"></Label>
+            <DatePicker x:Name="DateOfEating" Width="377" Height="36" FontSize="18" FontFamily="Verdana"/>
+            <Button x:Name="Apply" Content="Подтвердить" FontSize="20" FontFamily="Verdana" Margin="0 5 0 0"/>
+        </WrapPanel>
+        
+        <StatusBar Grid.Row="2" Grid.ColumnSpan="4">
+            <StatusBarItem Width="795">
+                <TextBlock x:Name="NowDateDescription" Width="795" FontSize="14" Text="Сегодня  "></TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        
+        <tb:TaskbarIcon IconSource="/icons/spider_4106.ico" ToolTipText="SpiderManager">
+        </tb:TaskbarIcon>
+        
     </Grid>
+    
 </Window>
