@@ -15,8 +15,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="0.15*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="Value" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Text="0" FontSize="20px" FontFamily="Verdana" VerticalAlignment="Center" TextChanged="Value_TextChanged"/>
-        <RepeatButton x:Name="Up" Grid.Column="1" Grid.Row="0" Content="▲" FontSize="10px" FontFamily="Verdana" Margin="3px 0 0 0" Click="Up_Click"></RepeatButton>
-        <RepeatButton x:Name="Down" Grid.Column="1" Grid.Row="1" Content="▼" FontSize="10px" FontFamily="Verdana" Margin="3px 0 0 0" Click="Down_Click"></RepeatButton>
+        <TextBox x:Name="Value" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Text="0" FontSize="18px" FontFamily="Verdana" VerticalAlignment="Center" TextChanged="Value_TextChanged"/>
+        <RepeatButton x:Name="Up" Grid.Column="1" Grid.Row="0" Content="▲" FontSize="8px" FontFamily="Verdana" Margin="3,7,0,0" Click="Up_Click" VerticalContentAlignment="Top"></RepeatButton>
+        <RepeatButton x:Name="Down" Grid.Column="1" Grid.Row="1" Content="▼" FontSize="8px" FontFamily="Verdana" Margin="3,0,0,8" Click="Down_Click" VerticalContentAlignment="Top"></RepeatButton>
     </Grid>
 </UserControl>
