@@ -39,16 +39,16 @@
 
         <!--add/edit form-->
         <WrapPanel x:Name="AddAndEdit" Visibility="Hidden" Grid.Row="1" Grid.Column="1">
-            <Label x:Name="FormHeaderLabel" FontSize="22" FontFamily="Verdana" Margin="0 0 0 10px"/>
+            <Label x:Name="FormHeaderLabel" FontSize="22" FontFamily="Verdana" Margin="0 0 0 5px"/>
             <Label x:Name="SpiderTypeLabel" Content="Вид паука:" FontSize="18" FontFamily="Verdana"/>
-            <TextBox x:Name="SpiderType" FontSize="20" FontFamily="Verdana" Width="377"></TextBox>
+            <TextBox x:Name="SpiderType" FontSize="16" FontFamily="Verdana" Width="377"></TextBox>
             <Label x:Name="SpiderNameLabel" Content="Кличка паука:" FontSize="18" FontFamily="Verdana"/>
-            <TextBox x:Name="SpiderName" FontSize="20" FontFamily="Verdana" Width="377"></TextBox>
+            <TextBox x:Name="SpiderName" FontSize="16" FontFamily="Verdana" Width="377"></TextBox>
             <Label x:Name="ChooseHeaderLabel" Content="Линька паука:" FontSize="18" FontFamily="Verdana" Width="367"/>
             <customcontrols:MyNumericUpDown x:Name="Choose" Width="225" Height="37" Margin="0 0 0 5"/>
-            <Label x:Name="DateOfEatingLabel" Content="Дата последнего кормления:" FontSize="20" FontFamily="Verdana"></Label>
-            <DatePicker x:Name="DateOfEating" Width="377" Height="36" FontSize="18" FontFamily="Verdana"/>
-            <Button x:Name="Apply" Content="Подтвердить" FontSize="20" FontFamily="Verdana" Margin="0 5 0 0"/>
+            <Label x:Name="DateOfEatingLabel" Content="Дата последнего кормления:" FontSize="18" FontFamily="Verdana"></Label>
+            <DatePicker x:Name="DateOfEating" Width="377" Height="28" FontSize="16" FontFamily="Verdana"/>
+            <Button x:Name="Apply" Content="Подтвердить" FontSize="18" FontFamily="Verdana" Margin="0 5 0 0"/>
         </WrapPanel>
         
         <StatusBar Grid.Row="2" Grid.ColumnSpan="4">
